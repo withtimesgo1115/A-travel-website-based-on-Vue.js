@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
             <img class="item-img" :src='item.imgUrl' />
             <div class="item-info">
                 <p class="item-title">{{item.title}}</p>
@@ -17,27 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1410/23/8492f586c3c1551cab635ccb25a4921f.jpg_200x200_4a7a209d.jpg',
-        title: '罗浮山宝田养生温泉',
-        desc: '浪漫惠州首战，浪漫的养生之旅'
-      },
-      {
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1410/23/8492f586c3c1551cab635ccb25a4921f.jpg_200x200_4a7a209d.jpg',
-        title: '罗浮山宝田养生温泉',
-        desc: '浪漫惠州首战，浪漫的养生之旅'
-      },
-      {
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1410/23/8492f586c3c1551cab635ccb25a4921f.jpg_200x200_4a7a209d.jpg',
-        title: '罗浮山宝田养生温泉',
-        desc: '浪漫惠州首战，浪漫的养生之旅'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
