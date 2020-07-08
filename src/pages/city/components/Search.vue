@@ -67,9 +67,6 @@ export default {
       }, 100)
     }
   },
-  mounted () {
-    this.scroll = new Bscroll(this.$refs.search)
-  },
   methods: {
     handleCityClick (city) {
       this.changeCity(city)
