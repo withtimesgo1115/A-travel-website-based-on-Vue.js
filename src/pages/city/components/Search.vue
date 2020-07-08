@@ -8,7 +8,6 @@
       v-show="keyword"
     >
       <ul>
-        <li class="search-item border-bottom" v-for="item of list" :key="item.id">{{item.name}}</li>
         <li class="search-item border-bottom"
         v-for="item of list"
         :key="item.id"
@@ -57,8 +56,7 @@ export default {
         const result = []
         for (let i in this.cities) {
           this.cities[i].forEach((value) => {
-            if (value.spell.indexOf(this.keyword) > -1 ||
-            value.name.indexOf(this.keyword) > -1) {
+            if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
               result.push(value)
             }
           })
