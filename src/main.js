@@ -13,7 +13,8 @@ import 'swiper/dist/css/swiper.css'
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
 
-/* eslint-disable no-new */
+/* old styles
+
 new Vue({
   el: '#app',
   router,
@@ -21,3 +22,11 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+*/
+
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')
